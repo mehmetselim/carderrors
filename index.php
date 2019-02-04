@@ -17,7 +17,7 @@ $sql_create_errors_tbl = "CREATE TABLE errors(
   error varchar(255) DEFAULT NULL,
   description TEXT DEFAULT NULL,
   PRIMARY KEY (id)
-) ENGINE=InnoDB";
+)";
 
 $result = $pdo->exec($sql_create_errors_tbl);
 
