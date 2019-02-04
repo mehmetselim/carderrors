@@ -12,12 +12,11 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 
-$sql_create_errors_tbl = "CREATE TABLE errors(
-  id int(11) NOT NULL AUTO_INCREMENT,
-  error varchar(255) DEFAULT NULL,
-  description TEXT DEFAULT NULL,
-  PRIMARY KEY (id)
-)";
+$sql_create_errors_tbl = "CREATE TABLE errors (
+    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+    error VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL
+    )"
 
 $result = $pdo->exec($sql_create_errors_tbl);
 
