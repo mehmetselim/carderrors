@@ -12,9 +12,7 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 
-$connectionResult =    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-var_dump($connectionResult);
+var_dump($pdo);
 exit;
 
 $sql_create_errors_tbl = "CREATE TABLE errors (
