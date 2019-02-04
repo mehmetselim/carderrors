@@ -19,8 +19,7 @@ try {
     
     $sql_create_errors_tbl = "CREATE TABLE errors (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-    error VARCHAR(255) NOT NULL
-    )"
+    error TEXT NOT NULL) ENGINE = InnoDB";
 
 $result = $conn->exec($sql_create_errors_tbl);
 
